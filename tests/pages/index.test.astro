@@ -1,0 +1,41 @@
+---
+// Snapshot test for the homepage
+// This test captures the complete rendered output of the homepage
+// Following the constitution requirement for snapshot testing
+---
+
+import { describe, it, expect } from 'vitest';
+import { render } from '@astrojs/testing';
+import Index from '../../src/pages/index.astro';
+
+describe('Homepage', () => {
+  it('should render the hello world homepage correctly', async () => {
+    const result = await render(Index);
+    
+    // This will create a snapshot of the rendered HTML
+    expect(result.html).toMatchSnapshot();
+  });
+  
+  it('should include proper meta tags', async () => {
+    const result = await render(Index);
+    
+    expect(result.html).toContain('<title>Astro Agent Template - Hello World</title>');
+    expect(result.html).toContain('name="description"');
+    expect(result.html).toContain('name="viewport"');
+  });
+  
+  it('should include the hello world heading', async () => {
+    const result = await render(Index);
+    
+    expect(result.html).toContain('Hello World! 🌍');
+    expect(result.html).toContain('Welcome to the Astro Agent Template');
+  });
+  
+  it('should include component showcase sections', async () => {
+    const result = await render(Index);
+    
+    expect(result.html).toContain('Atomic Components (Atoms)');
+    expect(result.html).toContain('Molecular Components (Molecules)');
+    expect(result.html).toContain('Technology Stack');
+  });
+});
