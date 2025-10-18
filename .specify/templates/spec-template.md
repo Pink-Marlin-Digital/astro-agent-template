@@ -105,6 +105,7 @@
 <!--
   ACTION REQUIRED: Define measurable success criteria.
   These must be technology-agnostic and measurable.
+  For Astro.js projects, include performance and accessibility criteria.
 -->
 
 ### Measurable Outcomes
@@ -113,4 +114,18 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+
+### Performance Criteria *(for Astro.js projects)*
+
+- **SC-005**: [Core Web Vitals metric, e.g., "First Contentful Paint under 1.5 seconds"]
+- **SC-006**: [Performance metric, e.g., "Largest Contentful Paint under 2.5 seconds"]
+- **SC-007**: [Accessibility metric, e.g., "WCAG 2.1 AA compliance for all pages"]
+- **SC-008**: [Bundle size metric, e.g., "Page bundle size under 100KB gzipped"]
+
+### Component Quality Criteria
+
+- **SC-009**: [Component reusability, e.g., "All UI components follow atomic design hierarchy"]
+- **SC-010**: [Type safety, e.g., "100% TypeScript coverage with no any types"]
+- **SC-011**: [Testing coverage, e.g., "100% snapshot test coverage for all pages"]
+- **SC-012**: [Code quality, e.g., "ESLint passes with zero errors on all files"]
 

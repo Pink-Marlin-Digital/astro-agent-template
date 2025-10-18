@@ -31,7 +31,35 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Atomic Component Design Compliance
+- [ ] All UI components follow atomic design hierarchy (atoms → molecules → organisms → templates → pages)
+- [ ] Each component is self-contained and independently testable
+- [ ] No component exceeds 200 lines without justification
+- [ ] Component interfaces are clearly defined
+
+### TypeScript & Code Quality Standards
+- [ ] All code written in TypeScript with strict type checking
+- [ ] No `any` types without explicit justification
+- [ ] ESLint with Airbnb standards configured and passing
+- [ ] All interfaces, types, and enums properly documented
+
+### Snapshot Testing Requirements
+- [ ] Snapshot testing strategy defined for all pages
+- [ ] Test files co-located with components
+- [ ] Test naming convention: `[component-name].test.astro`
+- [ ] TDD approach: tests written before implementation
+
+### Tailwind CSS Standards
+- [ ] All styling uses Tailwind CSS utility classes
+- [ ] No custom CSS files except component-specific styles
+- [ ] Mobile-first responsive design approach
+- [ ] Consistent design tokens and spacing
+
+### Astro.js Architecture
+- [ ] Server-side rendering as default
+- [ ] Static generation preferred over dynamic rendering
+- [ ] Framework islands for client-side interactivity
+- [ ] Performance budgets defined for Core Web Vitals
 
 ## Project Structure
 

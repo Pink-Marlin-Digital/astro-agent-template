@@ -46,8 +46,11 @@ description: "Task list template for feature implementation"
 **Purpose**: Project initialization and basic structure
 
 - [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T002 Initialize Astro.js project with TypeScript and Tailwind CSS
+- [ ] T003 [P] Configure ESLint with Airbnb standards
+- [ ] T004 [P] Setup snapshot testing framework
+- [ ] T005 [P] Configure Tailwind CSS with design tokens
+- [ ] T006 [P] Setup atomic component directory structure
 
 ---
 
@@ -57,14 +60,16 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-Examples of foundational tasks (adjust based on your project):
+Foundational tasks for Astro.js projects:
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T007 [P] Create base atomic components (atoms: Button, Input, Label)
+- [ ] T008 [P] Setup TypeScript interfaces and types for all components
+- [ ] T009 [P] Configure Tailwind design system with consistent tokens
+- [ ] T010 [P] Setup page templates and layout components
+- [ ] T011 [P] Configure Astro.js build and development environment
+- [ ] T012 [P] Setup snapshot testing for all base components
+- [ ] T013 [P] Configure performance monitoring and Core Web Vitals tracking
+- [ ] T014 [P] Setup accessibility testing framework
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -80,17 +85,18 @@ Examples of foundational tasks (adjust based on your project):
 
 **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T015 [P] [US1] Snapshot test for page in src/pages/[page-name].test.astro
+- [ ] T016 [P] [US1] Snapshot test for components in src/components/[component-name].test.astro
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T017 [P] [US1] Create atomic components in src/components/atoms/[component].astro
+- [ ] T018 [P] [US1] Create molecular components in src/components/molecules/[component].astro
+- [ ] T019 [US1] Create organism components in src/components/organisms/[component].astro (depends on T017, T018)
+- [ ] T020 [US1] Create page template in src/components/templates/[template].astro
+- [ ] T021 [US1] Implement page in src/pages/[page-name].astro
+- [ ] T022 [US1] Add TypeScript interfaces and prop validation
+- [ ] T023 [US1] Add Tailwind styling with responsive design
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -104,15 +110,16 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T024 [P] [US2] Snapshot test for page in src/pages/[page-name].test.astro
+- [ ] T025 [P] [US2] Snapshot test for components in src/components/[component-name].test.astro
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
-- [ ] T021 [US2] Implement [Service] in src/services/[service].py
-- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T023 [US2] Integrate with User Story 1 components (if needed)
+- [ ] T026 [P] [US2] Create atomic components in src/components/atoms/[component].astro
+- [ ] T027 [US2] Create molecular components in src/components/molecules/[component].astro
+- [ ] T028 [US2] Create organism components in src/components/organisms/[component].astro
+- [ ] T029 [US2] Implement page in src/pages/[page-name].astro
+- [ ] T030 [US2] Integrate with User Story 1 components (if needed)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -126,14 +133,15 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T031 [P] [US3] Snapshot test for page in src/pages/[page-name].test.astro
+- [ ] T032 [P] [US3] Snapshot test for components in src/components/[component-name].test.astro
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
-- [ ] T027 [US3] Implement [Service] in src/services/[service].py
-- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T033 [P] [US3] Create atomic components in src/components/atoms/[component].astro
+- [ ] T034 [US3] Create molecular components in src/components/molecules/[component].astro
+- [ ] T035 [US3] Create organism components in src/components/organisms/[component].astro
+- [ ] T036 [US3] Implement page in src/pages/[page-name].astro
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -147,12 +155,16 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
-- [ ] TXXX Run quickstart.md validation
+- [ ] T037 [P] Documentation updates in docs/
+- [ ] T038 Code cleanup and refactoring
+- [ ] T039 Performance optimization across all stories
+- [ ] T040 [P] ESLint compliance check and fixes
+- [ ] T041 [P] TypeScript strict mode validation
+- [ ] T042 [P] Snapshot test coverage validation
+- [ ] T043 [P] Accessibility audit and fixes
+- [ ] T044 [P] Core Web Vitals optimization
+- [ ] T045 [P] Tailwind CSS consistency review
+- [ ] T046 Run quickstart.md validation
 
 ---
 
